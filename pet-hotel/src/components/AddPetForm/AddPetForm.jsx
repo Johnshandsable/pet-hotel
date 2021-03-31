@@ -40,7 +40,9 @@ function AddPetForm() {
           setBreed(evt.target.value);
         }}
       />
-      <select>{/* Map some options here */}</select>
+      <select>
+        <option value="Carl">Carl</option>
+      </select>
       <button>Submit</button>
     </form>
   );
