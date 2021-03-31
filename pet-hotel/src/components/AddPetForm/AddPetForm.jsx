@@ -1,10 +1,45 @@
+import { useState } from 'react';
+
 function AddPetForm() {
+  const [name, setName] = useState('');
+  const [color, setColor] = useState('');
+  const [breed, setBreed] = useState('');
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    console.log('name', name);
+    console.log('color', color);
+    console.log('breed', breed);
+    console.log('submitting form');
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h4>Add Pet</h4>
-      <input type="text">Pet Name</input>
-      <input type="text">Pet Color</input>
-      <input type="text">Pet Breed</input>
+      <input
+        type="text"
+        placeholder="Pet Name"
+        value={name}
+        onChange={(evt) => {
+          setName(evt.target.value);
+        }}
+      />
+      <input
+        type="text"
+        placeholder="Pet Color"
+        value={color}
+        onChange={(evt) => {
+          setColor(evt.target.value);
+        }}
+      />
+      <input
+        type="text"
+        placeholder="Pet Breed"
+        value={breed}
+        onChange={(evt) => {
+          setBreed(evt.target.value);
+        }}
+      />
       <select>{/* Map some options here */}</select>
       <button>Submit</button>
     </form>
