@@ -1,2 +1,3 @@
 # pet-hotel
-A full-stack application writing the backend in Python
+
+The frontend for pet-hotel
