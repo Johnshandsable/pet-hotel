@@ -1,27 +1,31 @@
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch,
+} from 'react-router-dom';
 
 // Components
+import Dashboard from '../Dashboard/Dashboard';
 import Header from '../Header/Header';
+import ManageOwner from '../ManageOwner/ManageOwner';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+          <Route path="/manage">
+            <ManageOwner />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

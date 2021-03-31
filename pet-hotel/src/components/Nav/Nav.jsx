@@ -1,17 +1,18 @@
 import { Link } from 'react-router-dom';
 
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import Button from '@material-ui/core/Button';
 
 function Nav() {
   return (
-    <Menu keepMounted>
-      <MenuItem component={Link} to="/dashboard">
+    <div>
+      <Button component={Link} to="/dashboard">
         Dashboard
-      </MenuItem>
-      <MenuItem component={Link} to="/manage">
+      </Button>
+      <Button component={Link} to="/manage">
         Manage Owners
-      </MenuItem>
-    </Menu>
+      </Button>
+    </div>
   );
 }
+
+export default Nav;
