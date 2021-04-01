@@ -1,10 +1,5 @@
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Switch,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Components
 import Dashboard from '../Dashboard/Dashboard';
