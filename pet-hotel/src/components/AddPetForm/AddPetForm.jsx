@@ -18,10 +18,10 @@ function AddPetForm({ data }) {
     console.log(data);
     axios
       .post('/api/pets/add', {
-        name: name,
+        pet_name: name,
         color: color,
         breed: breed,
-        owner: owner,
+        owner_id: Number(owner),
       })
       .then((res) => {
         console.log('a response occurred', res);
@@ -65,7 +65,7 @@ function AddPetForm({ data }) {
       >
         {data.map((owner, i) => {
           return (
-            <option value={owner.owner_name} key={i}>
+            <option value={owner.owner_id} key={i}>
               {owner.owner_name}
             </option>
           );
