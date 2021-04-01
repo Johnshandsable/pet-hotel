@@ -1,5 +1,12 @@
+import AddOwnerForm from '../AddOwnerForm/AddOwnerForm';
+
 function ManageOwner() {
-  return <h3>Manage Owners here...</h3>;
+  return (
+    <div>
+      <h3>Manage Owners here...</h3>
+      <AddOwnerForm />
+    </div>
+  );
 }
 
 export default ManageOwner;
