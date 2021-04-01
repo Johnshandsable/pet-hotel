@@ -1,4 +1,5 @@
-function OwnerTableItem() {
+function OwnerTableItem({ owner }) {
+  console.log('owner', owner);
   return (
     <tr>
       <td>Carl</td>

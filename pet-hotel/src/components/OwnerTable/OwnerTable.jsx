@@ -1,6 +1,8 @@
 import OwnerTableItem from '../OwnerTable/OwnerTableItem';
 
-function OwnerTable({ owners }) {
+function OwnerTable({ ownersTable }) {
+  console.log('owner table', owners);
+
   return (
     <table className="history-table">
       <thead>
@@ -11,7 +13,9 @@ function OwnerTable({ owners }) {
         </tr>
       </thead>
       <tbody>
-        <OwnerTableItem />
+        {ownersTable.map((owner, index) => {
+          return <OwnerTableItem key={index} owner={owner} />;
+        })}
       </tbody>
     </table>
   );
