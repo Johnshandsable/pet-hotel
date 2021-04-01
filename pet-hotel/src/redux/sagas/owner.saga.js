@@ -10,7 +10,7 @@ function* getOwners() {
   }
 }
 
-function* petSaga() {
+function* ownerSaga() {
   yield takeLatest('GET_OWNERS', getOwners);
 }
 
