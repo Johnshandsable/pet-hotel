@@ -5,7 +5,7 @@ function AddOwnerForm() {
   };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input type="text" placeholder="owner name" />
       <button>Submit</button>
     </form>
