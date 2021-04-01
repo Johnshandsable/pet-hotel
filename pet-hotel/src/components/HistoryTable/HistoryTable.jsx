@@ -1,6 +1,6 @@
 import HistoryTableItem from './HistoryTableItem';
 
-function HistoryTable() {
+function HistoryTable({ data }) {
   return (
     <table className="history-table">
       <thead>
@@ -14,7 +14,9 @@ function HistoryTable() {
         </tr>
       </thead>
       <tbody>
-        <HistoryTableItem />
+        {/* {data.map((item) => {
+          <HistoryTableItem item={item} />;
+        })} */}
       </tbody>
     </table>
   );

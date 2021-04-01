@@ -1,4 +1,4 @@
-function HistoryTableItem() {
+function HistoryTableItem({ item }) {
   // <tr>
   //   <th>Owner</th>
   //   <th>Pet</th>
@@ -7,6 +7,7 @@ function HistoryTableItem() {
   //   <th>Checked In</th>
   //   <th>Actions</th>
   // </tr>
+  console.log('item', item);
 
   return (
     <tr>
