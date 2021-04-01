@@ -8,18 +8,23 @@ function ManageOwner() {
   const dispatch = useDispatch();
   const owners = useSelector((store) => store.ownerReducer);
 
-  useEffect(() => {
+  const fetchOwners = () => {
     dispatch({
       type: 'GET_OWNERS',
     });
+  };
+
+  useEffect(() => {
+    fetchOwners();
   }, []);
 
+  console.log('manageowner', owners);
+
   return (
-    <div>
-      <h3>Manage Owners here...</h3>
+    <>
       <AddOwnerForm />
-      <OwnerTable owners={owners} />
-    </div>
+      <OwnerTable ownersTable={owners} />
+    </>
   );
 }
 
