@@ -18,7 +18,7 @@ function ManageOwner() {
     <div>
       <h3>Manage Owners here...</h3>
       <AddOwnerForm />
-      <OwnerTable />
+      <OwnerTable owners={owners} />
     </div>
   );
 }

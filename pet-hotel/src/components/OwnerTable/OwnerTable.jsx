@@ -1,6 +1,6 @@
 import OwnerTableItem from '../OwnerTable/OwnerTableItem';
 
-function OwnerTable() {
+function OwnerTable({ owners }) {
   return (
     <table className="history-table">
       <thead>
