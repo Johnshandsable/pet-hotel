@@ -14,9 +14,9 @@ function HistoryTable({ data }) {
         </tr>
       </thead>
       <tbody>
-        {/* {data.map((item) => {
-          <HistoryTableItem item={item} />;
-        })} */}
+        {data.map((item, index) => {
+          return <HistoryTableItem item={item} key={index} />;
+        })}
       </tbody>
     </table>
   );

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function AddPetForm({ data }) {
   const [name, setName] = useState('');
