@@ -23,8 +23,8 @@ function Dashboard() {
   return (
     <div>
       <h3>This is a dashboard</h3>
-      <AddPetForm data={data} />
-      <HistoryTable />
+      <AddPetForm data={data} setData={setData} />
+      <HistoryTable data={data} />
     </div>
   );
 }
