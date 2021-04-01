@@ -17,11 +17,11 @@ function AddPetForm({ data }) {
 
     console.log(data);
     axios
-      .post('/api/pet/add', {
-        name,
-        color,
-        breed,
-        owner,
+      .post('/api/pets/add', {
+        name: name,
+        color: color,
+        breed: breed,
+        owner: owner,
       })
       .then((res) => {
         console.log('a response occurred', res);
